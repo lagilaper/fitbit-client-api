@@ -1,0 +1,23 @@
+{
+  "name": "fitbit-client-api",
+  "version": "0.0.1",
+  "description": "Fitbit client API. It doesn't provide functionality for oauth2. Only refresh tokens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lagilaper/fitbit-client-api.git"
+  },
+  "keywords": [
+    "fitbit",
+    "node-fitbit"
+  ],
+  "author": "lagilaper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lagilaper/fitbit-client-api/issues"
+  },
+  "homepage": "https://github.com/lagilaper/fitbit-client-api"
+}
