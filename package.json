@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/lagilaper/fitbit-client-api",
   "dependencies": {
+    "moment": "^2.10.6",
     "object-assign": "^4.0.1",
     "request": "^2.66.0"
   }
