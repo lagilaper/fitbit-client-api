@@ -31,7 +31,8 @@ app.get( '/activities/:category', function( req, res, next ) {
 		resourcePath: 'activities/' + req.params.category,
 		baseDate: '2015-11-10',
 		period: '30d',
-		endDate: '2015-11-01'
+		endDate: '2015-11-01',
+		userId: '-'
 	};
 
 	fitbit.getTimeSeries(tokenObj, options, function (err, result) {
@@ -49,5 +50,40 @@ app.get( '/refresh_token', function( req, res, next ) {
 		res.send(token)
 	});
 });
+
+// BASIC API
+app.get ( '/sleep', function ( req, res, next ) {
+	var options = {
+		path: '/sleep/date/2015-10-10.json',
+		userId: '-'
+	};
+
+	fitbit.get( tokenObj, options, function (err, result){
+		if (err) { return res.status(500).send(err) ; }
+
+		res.json(result);
+	});
+});
+
+app.post( '/water', function( req, res, next ) {
+	var data = {
+		waterLog: {
+			"logId": 15444,
+			"amount": 300
+		}
+	};
+
+	var options = {
+		path: '/foods/log/water.json',
+		userId: '-'
+	};
+
+	fitbit.post( tokenObj, options, data, function (err, result){
+		if (err) { return res.status(500).send(err) ; }
+
+		res.json(result);
+	});
+});
+
 
 app.listen(3000);

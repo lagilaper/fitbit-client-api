@@ -33,4 +33,19 @@ RequestObj is an object that contains resource-specific data that follow Fitbit 
 Refreshing access token from users. Result will be token object with user_id and current API scope.
 
 
+## BASIC API for RESOURCE
+Each request required valid object in the following format as parameter
+* `path` : resource path e.g. `/sleep/date/2015-10-10.json`
+* `userId` : Optional parameter. Default value is `-` if not provided.
 
+#### `get(tokenObj, options, callback)`
+Get user's resource data based on provided options.
+
+#### `post(tokenObj, options, [data], callback)`
+Post user's resource data based on provided options. Data is an optional parameter.
+
+#### `put(tokenObj, options, [data], callback)`
+Put request of user's resource data based on provided options. Data is an optional parameter.
+
+#### `delete(tokenObj, options, callback)`
+Delete user's resource data based on provided options. Data is an optional parameter.
