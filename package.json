@@ -1,6 +1,6 @@
 {
   "name": "fitbit-client-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fitbit client API. It doesn't provide functionality for oauth2. Only refresh tokens.",
   "main": "lib/index.js",
   "scripts": {
