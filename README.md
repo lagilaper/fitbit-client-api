@@ -35,7 +35,7 @@ Refreshing access token from users. Result will be token object with user_id and
 
 ## BASIC API for RESOURCE
 Each request required valid object in the following format as parameter
-* `path` : resource path e.g. `/sleep/date/2015-10-10.json`
+* `path` : resource path e.g. `sleep/date/2015-10-10.json`
 * `userId` : Optional parameter. Default value is `-` if not provided.
 
 #### `get(tokenObj, options, callback)`
